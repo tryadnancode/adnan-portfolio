@@ -1,0 +1,442 @@
+/* ================= ROOT ================= */
+:root {
+  --bg-dark: #0b0f1a;
+  --bg-light: #11162a;
+  --primary: #7c7cff;
+  --secondary: #00e0ff;
+  --text-main: #ffffff;
+  --text-muted: #b8c1ec;
+  --glass: rgba(255, 255, 255, 0.08);
+  --blur: blur(16px);
+}
+
+/* ================= GLOBAL ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background: radial-gradient(circle at top, #141a36, #060814);
+  color: var(--text-main);
+  line-height: 1.7;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* ================= NAVBAR ================= */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  padding: 20px 8%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  backdrop-filter: blur(10px);
+  background: rgba(10, 10, 30, 0.6);
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.nav-logo {
+  font-size: 24px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.nav-links a {
+  margin-left: 25px;
+  font-weight: 500;
+  opacity: 0.85;
+}
+
+.resume-btn {
+  padding: 8px 16px;
+  border-radius: 20px;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  font-weight: 600;
+}
+
+/* ================= HERO ================= */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 8%;
+}
+
+.hero-glass {
+  max-width: 750px;
+  text-align: center;
+  padding: 50px;
+  background: var(--glass);
+  backdrop-filter: var(--blur);
+  border-radius: 30px;
+  box-shadow: 0 30px 80px rgba(0,0,0,0.5);
+}
+
+.profile-img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  margin: 0 auto 20px;
+  border: 3px solid var(--primary);
+}
+
+.hero h1 {
+  font-size: 44px;
+  font-weight: 800;
+}
+
+.hero h2 {
+  font-size: 20px;
+  color: var(--text-muted);
+  margin-bottom: 15px;
+}
+
+.hero-desc {
+  margin: 20px 0;
+  font-size: 16px;
+}
+
+.hero-links {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.hero-links a {
+  padding: 12px 20px;
+  border-radius: 30px;
+  background: rgba(255,255,255,0.1);
+  transition: all 0.3s ease;
+}
+
+.hero-links a:hover {
+  transform: translateY(-3px);
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+}
+
+.hero-links .primary {
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+}
+
+/* ================= STATS ================= */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
+  padding: 50px 8%;
+  text-align: center;
+}
+
+.stat {
+  background: var(--glass);
+  backdrop-filter: var(--blur);
+  border-radius: 20px;
+  padding: 25px;
+  font-size: 32px;
+  font-weight: 800;
+}
+
+.stat span {
+  display: block;
+  font-size: 14px;
+  color: var(--text-muted);
+}
+
+/* ================= SECTIONS ================= */
+.section {
+  padding: 60px 6%;
+}
+
+.section h3 {
+  text-align: center;
+  font-size: 34px;
+  margin-bottom: 40px;
+}
+
+/* ================= SKILLS ================= */
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+
+.skills span {
+  padding: 12px 20px;
+  background: var(--glass);
+  border-radius: 25px;
+  backdrop-filter: var(--blur);
+  font-size: 14px;
+}
+
+/* ================= EXPERIENCE ================= */
+.timeline {
+  max-width: 900px;
+  margin: auto;
+  display: grid;
+  gap: 30px;
+}
+
+.timeline-card {
+  padding: 30px;
+  border-radius: 25px;
+  background: var(--glass);
+  backdrop-filter: var(--blur);
+}
+
+.timeline-card h4 {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.timeline-card span {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.timeline-card ul {
+  margin-top: 15px;
+  padding-left: 20px;
+}
+
+/* ================= APPS ================= */
+/* ================= APPS ================= */
+.apps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 35px;
+}
+
+.app-card {
+  border-radius: 26px;
+  overflow: hidden;
+  background: var(--glass);
+  backdrop-filter: var(--blur);
+  box-shadow: 0 25px 60px rgba(0,0,0,0.45);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.app-card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 40px 90px rgba(0,0,0,0.7);
+}
+
+/* ---------- IMAGE AREA ---------- */
+.app-image {
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.app-image img {
+  max-height: 120px;
+  max-width: 70%;
+  object-fit: contain;
+  filter: drop-shadow(0 10px 25px rgb(255, 249, 249));
+}
+
+/* ---------- CONTENT ---------- */
+.app-content {
+  padding: 22px 24px 28px;
+  text-align: center;
+}
+
+.app-content h4 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.app-content p {
+  font-size: 14px;
+  color: var(--text-muted);
+}
+
+/* ================= APP COLORS ================= */
+.app-green .app-image {
+  background: linear-gradient(135deg, #ffffff, #ffffff);
+}
+
+.app-blue .app-image {
+  background: linear-gradient(135deg, #ffffff, #ffffff);
+}
+
+.app-white .app-image {
+  background: linear-gradient(135deg, #ffffff, #ffffff);
+}
+
+.app-white .app-content h4,
+.app-white .app-content p {
+  color: #edeff3;
+}
+
+
+/* ================= FOOTER ================= */
+.footer {
+  text-align: center;
+  padding: 40px 20px;
+  background: rgba(0,0,0,0.4);
+}
+
+.footer-socials {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.footer-socials a {
+  font-size: 26px;
+  transition: transform 0.3s ease;
+}
+
+.footer-socials a:hover {
+  transform: scale(1.3);
+  color: var(--secondary);
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 34px;
+  }
+}
+
+/* ================= AVATAR (NO IMAGE) ================= */
+.avatar {
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-family: "Playfair Display", serif;
+  font-size: 56px;
+  font-weight: 700;
+  color: white;
+  margin: 0 auto 26px;
+  background:
+    linear-gradient(135deg, #6366f1, #22d3ee);
+  box-shadow:
+    0 0 0 6px rgba(99,102,241,0.25),
+    0 30px 80px rgba(0,0,0,0.6);
+}
+
+/* ================= APP ICON PLACEHOLDER ================= */
+.app-icon {
+  width: 72px;
+  height: 72px;
+  border-radius: 18px;
+  display: grid;
+  place-items: center;
+  font-size: 32px;
+  margin-bottom: 18px;
+  background: linear-gradient(135deg, #6366f1, #22d3ee);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}
+.hero-glass {
+  max-width: 640px;
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+/* ================= MOBILE NAVBAR FIX ================= */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 12px 16px;
+    flex-wrap: wrap;
+    row-gap: 10px;
+  }
+
+  .nav-logo {
+    font-size: 20px;
+  }
+
+  .nav-links {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .nav-links a {
+    margin-left: 0;
+    font-size: 14px;
+    opacity: 0.9;
+  }
+
+  /* Resume button becomes smaller & cleaner */
+  .resume-btn {
+    padding: 6px 14px;
+    font-size: 13px;
+    border-radius: 999px;
+    white-space: nowrap;
+  }
+}
+/* ================= FOOTER ICON COLORS ================= */
+
+/* Email icon + email link */
+.footer .fa-envelope,
+.footer a[href^="mailto"] {
+  color: #4f7cff; /* blue */
+}
+
+/* LinkedIn icon */
+.footer .fa-linkedin {
+  color: #0a66c2; /* official LinkedIn blue */
+}
+
+/* Hover effect (optional but nice) */
+.footer a:hover {
+  opacity: 0.85;
+}
+
+/* ================= AA LOGO ================= */
+.logo-aa {
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-weight: 800;
+  font-size: 16px;
+  letter-spacing: 1px;
+
+  color: white;
+  background: linear-gradient(135deg, #7c7cff, #00e0ff);
+
+  box-shadow:
+    0 6px 18px rgba(0, 224, 255, 0.35),
+    inset 0 0 0 1px rgba(255,255,255,0.25);
+}
+@media (max-width: 768px) {
+  .logo-aa {
+    width: 36px;
+    height: 36px;
+    font-size: 14px;
+  }
+}
+.logo-aa {
+  font-family: "Inter", sans-serif;
+}
