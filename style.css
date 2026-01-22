@@ -92,7 +92,12 @@ img {
   border-radius: 50%;
   margin: 0 auto 20px;
   border: 3px solid var(--primary);
+
+  object-fit: cover;      /* crops image */
+  object-position: center;
+  transform: scale(1.15); /* zoom in */
 }
+
 
 .hero h1 {
   font-size: 44px;
@@ -251,6 +256,15 @@ img {
   object-fit: contain;
   filter: drop-shadow(0 10px 25px rgb(255, 249, 249));
 }
+
+/* ONLY for MyDiaree image */
+.app-card img[src*="mydiaree"] {
+  max-height: 100px;
+  max-width: 70%;
+  border-radius: 22px;
+  transform: scale(1.12);
+}
+
 
 /* ---------- CONTENT ---------- */
 .app-content {
@@ -439,4 +453,20 @@ img {
 }
 .logo-aa {
   font-family: "Inter", sans-serif;
+}
+.rounded-card {
+  border-radius: 32px;
+  overflow: hidden;
+}
+.section-title {
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  gap: 12px;
+}
+
+
+.section-title i {
+  font-size: 22px;
+  opacity: 0.9;
 }
